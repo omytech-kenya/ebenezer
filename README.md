@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚌 ENA Coach Website
 
-# Run and deploy your AI Studio app
+This is a modern and responsive website built for **ENA Coach**, one of the leading passenger transport companies in Kenya.  
+The website showcases ENA Coach’s services, routes, schedules, and contact information, making it easy for customers to access reliable travel details online.  
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1iVdStbeEYbchX5LMGxU6wDbgVzg4Pyw6
+## 🚀 Features
+- Modern, mobile-first responsive design  
+- Company profile and service details  
+- Routes and travel information  
+- Contact and booking information  
+- SEO optimized and fast-loading  
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
+- **Frontend:** Next.js / React + Tailwind CSS  
+- **Backend:** (if used, e.g., Appwrite, Firebase, or Node.js)  
+- **Deployment:** Vercel / Netlify / Other hosting platform  
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📦 Installation & Setup
+
+Clone the repo:
+```bash
+git clone https://github.com/your-username/ena-coach-website.git
+cd ena-coach-website
