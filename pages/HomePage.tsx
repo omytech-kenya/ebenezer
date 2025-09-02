@@ -72,10 +72,14 @@ const HomePage: React.FC = () => {
             <h2 className="text-3xl font-bold text-secondary-navy sm:text-4xl">Why Choose Ebenezer Academy?</h2>
             <p className="mt-4 text-lg text-gray-600">Nurturing bright futures with a commitment to excellence.</p>
           </div>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {achievements.map((item, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-green mb-6">
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-lg ring-1 ring-black/5 p-8 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary-green/10 blur-2xl"></div>
+                <div className="relative flex items-center justify-center h-16 w-16 rounded-2xl bg-primary-green text-white mb-6 shadow-md">
                   {item.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-secondary-navy">{item.title}</h3>
@@ -87,7 +91,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-16 sm:py-24">
+      <section id="campus-life" className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-secondary-navy sm:text-4xl">Campus Life</h2>
@@ -107,6 +111,63 @@ const HomePage: React.FC = () => {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-secondary-navy sm:text-4xl">What Parents Say</h2>
+            <p className="mt-3 text-base md:text-lg text-gray-600">Real stories from our community.</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[{
+              quote: 'Our child has flourished academically and socially. The teachers truly care.',
+              name: 'Grace A.',
+              role: 'Parent of Grade 6'
+            },{
+              quote: 'A nurturing environment with strong values and excellent results.',
+              name: 'Peter O.',
+              role: 'Parent of JSS'
+            },{
+              quote: 'The extracurriculars helped my son discover his passion for music.',
+              name: 'Lydia N.',
+              role: 'Parent of Grade 4'
+            }].map((t, i) => (
+              <div key={i} className="rounded-2xl bg-gray-50 p-8 ring-1 ring-black/5 shadow-sm">
+                <div className="mb-4 text-primary-green">
+                  <svg className="h-8 w-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.17 6A5.17 5.17 0 0 0 2 11.17V20h8v-8H6.83A2.83 2.83 0 0 1 9.66 9.17 5.17 5.17 0 0 0 7.17 6Zm10 0A5.17 5.17 0 0 0 12 11.17V20h8v-8h-3.17A2.83 2.83 0 0 1 19.66 9.17 5.17 5.17 0 0 0 17.17 6Z"/></svg>
+                </div>
+                <p className="text-gray-700 leading-relaxed">{t.quote}</p>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-primary-green/20 ring-1 ring-primary-green/30"></div>
+                  <div>
+                    <div className="font-semibold text-secondary-navy">{t.name}</div>
+                    <div className="text-sm text-gray-500">{t.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Admissions CTA Band */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-secondary-navy to-black text-white p-8 md:p-12 ring-1 ring-black/10">
+            <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary-green/20 blur-3xl"></div>
+            <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold tracking-tight">Ready to Join BUSIA EBENEZER ACADEMY?</h3>
+                <p className="mt-2 text-gray-200">Admissions are open. Take the first step toward excellence today.</p>
+              </div>
+              <div>
+                <Link to="/admissions" className="inline-flex items-center justify-center rounded-full bg-primary-green px-6 py-3 font-semibold text-white shadow-lg hover:bg-green-700 transition-colors">Apply Now</Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
