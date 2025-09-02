@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-3">
-              <SchoolCrest className="h-12 w-12 text-white" />
+              <img src="/logo.png" alt="Ebenezer Academy" className="h-12 w-12 object-contain" />
               <div>
                 <h2 className="text-xl font-bold">Ebenezer Academy</h2>
                 <p className="text-sm text-gray-300">Busia, Kenya</p>

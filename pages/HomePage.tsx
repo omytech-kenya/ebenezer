@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SchoolCrest } from '../components/icons/SchoolCrest';
 import { SparklesIcon, TrophyIcon } from '../components/icons/IconLibrary';
 
 const achievements = [
@@ -16,36 +15,39 @@ const achievements = [
     description: 'Regional champions in music festivals and athletics, nurturing all-round student development.',
   },
   {
-    icon: <SchoolCrest className="h-10 w-10 text-white" />,
+    icon: <SparklesIcon className="h-10 w-10 text-white" />,
     title: 'Modern Facilities',
     description: 'Well-equipped classrooms, a modern library, and science labs to support holistic learning.',
   },
 ];
 
 const galleryImages = [
-  'https://picsum.photos/seed/school1/600/400',
-  'https://picsum.photos/seed/students2/600/400',
-  'https://picsum.photos/seed/classroom3/600/400',
-  'https://picsum.photos/seed/library4/600/400',
-  'https://picsum.photos/seed/sports5/600/400',
-  'https://picsum.photos/seed/campus6/600/400',
+  '/campus/ebe1.png',
+  '/campus/ebe2.png',
+  '/campus/ebe3.png',
+  '/campus/ebe4.png',
+  '/campus/ebe5.png',
+  '/campus/ebe6.png',
 ];
 
 const HomePage: React.FC = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-secondary-navy text-white py-20 md:py-32">
+      <section className="relative bg-secondary-navy text-white pt-12 pb-20 md:pt-20 md:pb-32">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('https://picsum.photos/seed/campus/1600/900')" }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/ebe1.png')" }}
         ></div>
+        <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <div className="flex justify-center mb-6">
-            <SchoolCrest className="h-24 w-24 text-white" />
+          <div className="relative flex justify-center mb-6">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-28 w-28 rounded-full bg-white/70 blur-xl opacity-90"></div>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-40 w-40 rounded-full bg-white/30 blur-3xl opacity-80"></div>
+            <img src="/logo.png" alt="Busia Ebenezer Academy" className="relative h-24 w-24 object-contain drop-shadow-2xl" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Ebenezer Academy, Busia</h1>
-          <p className="mt-4 text-xl md:text-2xl text-gray-200">“Center of Academic Excellence in Busia”</p>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">BUSIA EBENEZER ACADEMY</h1>
+          <p className="mt-4 text-xl md:text-2xl text-gray-200">“TOGETHER WE ALL SUCCEED”</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
               to="/admissions"
@@ -89,12 +91,20 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-secondary-navy sm:text-4xl">Campus Life</h2>
-            <p className="mt-4 text-lg text-gray-600">A glimpse into our vibrant and engaging school environment.</p>
+            <p className="mt-3 text-base md:text-lg text-gray-600">A glimpse into our vibrant, welcoming and engaging school environment.</p>
           </div>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {galleryImages.map((src, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-lg aspect-w-3 aspect-h-2">
-                <img src={src} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover transition duration-300 transform hover:scale-105" />
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl shadow-lg ring-1 ring-black/5 aspect-[3/2] bg-white"
+              >
+                <img
+                  src={src}
+                  alt={`Campus image ${index + 1}`}
+                  className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
               </div>
             ))}
           </div>

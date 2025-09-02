@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <NavLink to="/" className="flex items-center space-x-2">
-              <SchoolCrest className="h-12 w-12 text-primary-green" />
+              <img src="/logo.png" alt="Ebenezer Academy" className="h-12 w-12 object-contain" />
               <div className="flex flex-col">
                 <span className="font-bold text-lg text-primary-green leading-tight">Ebenezer Academy</span>
                 <span className="text-xs text-secondary-navy font-medium leading-tight">Busia, Kenya</span>
