@@ -89,8 +89,8 @@ const Header: React.FC = () => {
                     onMouseLeave={scheduleClosePortals}
                   >
                     <div className="py-2">
-                      <a href="#" className="block px-4 py-2 text-sm text-secondary-navy hover:bg-green-50">Teachers Portal</a>
-                      <a href="#" className="block px-4 py-2 text-sm text-secondary-navy hover:bg-green-50">Parents Portal</a>
+                      <NavLink to="/portal/teachers" className={({isActive}) => linkClass({isActive}) + ' !rounded-none'}>Teachers Portal</NavLink>
+                      <NavLink to="/portal/parents" className={({isActive}) => linkClass({isActive}) + ' !rounded-none'}>Parents Portal</NavLink>
                     </div>
                   </div>
                 )}

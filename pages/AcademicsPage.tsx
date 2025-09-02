@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import Reveal from '../components/Reveal';
 
 const academicLevels = {
   'Pre-Primary': {
@@ -33,8 +34,10 @@ const AcademicsPage: React.FC = () => {
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/ebe1.png')" }}></div>
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Our Academic Programs</h1>
-          <p className="mt-3 text-lg md:text-xl text-gray-200">A comprehensive curriculum for holistic development.</p>
+          <Reveal direction="up">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Our Academic Programs</h1>
+            <p className="mt-3 text-lg md:text-xl text-gray-200">A comprehensive curriculum for holistic development.</p>
+          </Reveal>
         </div>
       </section>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
@@ -62,17 +65,21 @@ const AcademicsPage: React.FC = () => {
             {Object.entries(academicLevels).map(([level, content]) => (
               <div key={level} className={activeTab === level ? 'block' : 'hidden'}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <h3 className="text-2xl font-semibold text-secondary-navy mb-4">{level}</h3>
-                        <p className="text-gray-700 mb-4">{content.description}</p>
-                        <h4 className="font-semibold text-secondary-navy mb-2">Key Learning Areas:</h4>
-                        <ul className="list-disc list-inside text-gray-600 space-y-1">
-                            {content.subjects.map(subject => <li key={subject}>{subject}</li>)}
-                        </ul>
-                    </div>
-                    <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/10 aspect-[4/3] md:aspect-[16/10]">
-                      <img src={content.image} alt={level} className="absolute inset-0 h-full w-full object-cover"/>
-                    </div>
+                    <Reveal>
+                      <div>
+                          <h3 className="text-2xl font-semibold text-secondary-navy mb-4">{level}</h3>
+                          <p className="text-gray-700 mb-4">{content.description}</p>
+                          <h4 className="font-semibold text-secondary-navy mb-2">Key Learning Areas:</h4>
+                          <ul className="list-disc list-inside text-gray-600 space-y-1">
+                              {content.subjects.map(subject => <li key={subject}>{subject}</li>)}
+                          </ul>
+                      </div>
+                    </Reveal>
+                    <Reveal delayMs={120}>
+                      <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/10 aspect-[4/3] md:aspect-[16/10]">
+                        <img src={content.image} alt={level} className="absolute inset-0 h-full w-full object-cover"/>
+                      </div>
+                    </Reveal>
                 </div>
               </div>
             ))}
@@ -80,7 +87,7 @@ const AcademicsPage: React.FC = () => {
         </div>
 
         {/* Academic Achievements */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-16 ring-1 ring-black/5">
+        <Reveal className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-16 ring-1 ring-black/5">
             <h2 className="text-3xl font-bold text-center text-secondary-navy mb-8">Academic Achievements</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div className="p-6 rounded-xl bg-gray-50 ring-1 ring-black/5">
@@ -97,7 +104,7 @@ const AcademicsPage: React.FC = () => {
                 </div>
             </div>
             <p className="text-center mt-8 text-gray-700">We are incredibly proud of our students' consistent and outstanding performance in national examinations.</p>
-        </div>
+        </Reveal>
 
         {/* Extracurricular Activities */}
         <div>
@@ -117,7 +124,7 @@ const AcademicsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-secondary-navy to-black text-white p-8 md:p-12 ring-1 ring-black/10">
             <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary-green/20 blur-3xl"></div>
-            <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <Reveal className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight">Explore Our Programs</h3>
                 <p className="mt-2 text-gray-200">Talk to our team to choose the right pathway for your child.</p>
@@ -125,7 +132,7 @@ const AcademicsPage: React.FC = () => {
               <div>
                 <a href="#/contact" className="inline-flex items-center justify-center rounded-full bg-primary-green px-6 py-3 font-semibold text-white shadow-lg hover:bg-green-700 transition-colors">Contact Us</a>
               </div>
-            </div>
+            </Reveal>
           </div>
         </div>
       </section>

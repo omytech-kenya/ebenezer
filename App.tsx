@@ -8,6 +8,8 @@ import AboutPage from './pages/AboutPage';
 import AcademicsPage from './pages/AcademicsPage';
 import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
+import TeachersPortal from './pages/TeachersPortal';
+import ParentsPortal from './pages/ParentsPortal';
 
 const App: React.FC = () => {
   const ScrollToTop: React.FC = () => {
@@ -32,6 +34,8 @@ const App: React.FC = () => {
             <Route path="/academics" element={<AcademicsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/portal/teachers" element={<TeachersPortal />} />
+            <Route path="/portal/parents" element={<ParentsPortal />} />
           </Routes>
         </main>
         <Footer />

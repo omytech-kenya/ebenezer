@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Reveal from '../components/Reveal';
 
 const achievements = [
   {
@@ -65,20 +66,23 @@ const HomePage: React.FC = () => {
       <section className="py-16 sm:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-secondary-navy sm:text-4xl">Why Choose Ebenezer Academy?</h2>
-            <p className="mt-4 text-lg text-gray-600">Nurturing bright futures with a commitment to excellence.</p>
+            <Reveal direction="up">
+              <h2 className="text-3xl font-bold text-secondary-navy sm:text-4xl">Why Choose Ebenezer Academy?</h2>
+              <p className="mt-4 text-lg text-gray-600">Nurturing bright futures with a commitment to excellence.</p>
+            </Reveal>
           </div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {achievements.map((item, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-xl bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-lg ring-1 ring-black/5 p-8 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary-green/10 blur-2xl"></div>
-                <div className="h-1.5 w-14 bg-primary-green rounded-full mb-6"></div>
-                <h3 className="text-xl font-semibold text-secondary-navy">{item.title}</h3>
-                <p className="mt-2 text-base text-gray-600">{item.description}</p>
-              </div>
+              <Reveal key={index} delayMs={index * 120}>
+                <div
+                  className="group relative overflow-hidden rounded-xl bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-lg ring-1 ring-black/5 p-8 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                >
+                  <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary-green/10 blur-2xl"></div>
+                  <div className="h-1.5 w-14 bg-primary-green rounded-full mb-6"></div>
+                  <h3 className="text-xl font-semibold text-secondary-navy">{item.title}</h3>
+                  <p className="mt-2 text-base text-gray-600">{item.description}</p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -93,17 +97,18 @@ const HomePage: React.FC = () => {
           </div>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {galleryImages.map((src, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg ring-1 ring-black/5 aspect-[3/2] bg-white"
-              >
-                <img
-                  src={src}
-                  alt={`Campus image ${index + 1}`}
-                  className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
-              </div>
+              <Reveal key={index} delayMs={index * 80}>
+                <div
+                  className="group relative overflow-hidden rounded-xl shadow-lg ring-1 ring-black/5 aspect-[3/2] bg-white"
+                >
+                  <img
+                    src={src}
+                    alt={`Campus image ${index + 1}`}
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 opacity-80 transition-opacity duration-300 group-hover:opacity-90"></div>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
