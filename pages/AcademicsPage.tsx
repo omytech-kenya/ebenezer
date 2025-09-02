@@ -6,17 +6,17 @@ const academicLevels = {
   'Pre-Primary': {
     description: "Our Pre-Primary section (PP1 & PP2) focuses on learning through play. We provide a stimulating environment that builds a strong foundation in literacy, numeracy, and social skills, preparing young learners for primary school.",
     subjects: ['Language Activities', 'Mathematical Activities', 'Environmental Activities', 'Psychomotor & Creative Activities', 'Religious Education'],
-    image: '/campus/ebe1.png'
+    image: '/ebe6.png'
   },
   'Primary': {
     description: "The Primary section (Grade 1 to 6) follows the CBC curriculum, emphasizing inquiry-based learning and critical thinking. We aim to develop competent, confident, and responsible students.",
     subjects: ['English', 'Kiswahili', 'Mathematics', 'Science & Technology', 'Agriculture', 'Social Studies', 'CRE', 'Art & Craft', 'Music', 'Physical & Health Education'],
-    image: '/campus/ebe4.png'
+    image: '/ebe4.png'
   },
   'Junior Secondary': {
     description: "Our Junior Secondary School (JSS - Grade 7, 8, & 9) bridges primary and secondary education. We provide a broad curriculum that allows students to explore their interests and talents while preparing for future academic pathways.",
     subjects: ['Core Subjects (e.g., English, Maths)', 'Optional Subjects (e.g., Foreign Languages, Performing Arts)', 'Pre-Technical & Pre-Career Studies'],
-    image: '/campus/ebe5.png'
+    image: '/ebe5.png'
   }
 };
 
