@@ -112,6 +112,23 @@ const AcademicsPage: React.FC = () => {
           </div>
         </div>
       </div>
+      {/* CTA Band */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-secondary-navy to-black text-white p-8 md:p-12 ring-1 ring-black/10">
+            <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-primary-green/20 blur-3xl"></div>
+            <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold tracking-tight">Explore Our Programs</h3>
+                <p className="mt-2 text-gray-200">Talk to our team to choose the right pathway for your child.</p>
+              </div>
+              <div>
+                <a href="#/contact" className="inline-flex items-center justify-center rounded-full bg-primary-green px-6 py-3 font-semibold text-white shadow-lg hover:bg-green-700 transition-colors">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

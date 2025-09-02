@@ -1,21 +1,17 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SparklesIcon, TrophyIcon } from '../components/icons/IconLibrary';
 
 const achievements = [
   {
-    icon: <TrophyIcon className="h-10 w-10 text-white" />,
     title: 'Top KCPE Performers',
     description: 'Consistently producing students with 400+ marks, ranking among the best in the county.',
   },
   {
-    icon: <SparklesIcon className="h-10 w-10 text-white" />,
     title: 'Extracurricular Excellence',
     description: 'Regional champions in music festivals and athletics, nurturing all-round student development.',
   },
   {
-    icon: <SparklesIcon className="h-10 w-10 text-white" />,
     title: 'Modern Facilities',
     description: 'Well-equipped classrooms, a modern library, and science labs to support holistic learning.',
   },
@@ -50,10 +46,10 @@ const HomePage: React.FC = () => {
           <p className="mt-4 text-xl md:text-2xl text-gray-200">“TOGETHER WE ALL SUCCEED”</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
-              to="/admissions"
+              to="/contact"
               className="bg-primary-green hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
             >
-              Apply Now
+              Contact Us
             </Link>
             <Link
               to="/about"
@@ -79,9 +75,7 @@ const HomePage: React.FC = () => {
                 className="group relative overflow-hidden rounded-xl bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-lg ring-1 ring-black/5 p-8 transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary-green/10 blur-2xl"></div>
-                <div className="relative flex items-center justify-center h-16 w-16 rounded-2xl bg-primary-green text-white mb-6 shadow-md">
-                  {item.icon}
-                </div>
+                <div className="h-1.5 w-14 bg-primary-green rounded-full mb-6"></div>
                 <h3 className="text-xl font-semibold text-secondary-navy">{item.title}</h3>
                 <p className="mt-2 text-base text-gray-600">{item.description}</p>
               </div>
@@ -162,10 +156,10 @@ const HomePage: React.FC = () => {
             <div className="relative flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight">Ready to Join BUSIA EBENEZER ACADEMY?</h3>
-                <p className="mt-2 text-gray-200">Admissions are open. Take the first step toward excellence today.</p>
+                <p className="mt-2 text-gray-200">Have questions or want to start enrollment? Talk to us today.</p>
               </div>
               <div>
-                <Link to="/admissions" className="inline-flex items-center justify-center rounded-full bg-primary-green px-6 py-3 font-semibold text-white shadow-lg hover:bg-green-700 transition-colors">Apply Now</Link>
+                <Link to="/contact" className="inline-flex items-center justify-center rounded-full bg-primary-green px-6 py-3 font-semibold text-white shadow-lg hover:bg-green-700 transition-colors">Contact Us</Link>
               </div>
             </div>
           </div>

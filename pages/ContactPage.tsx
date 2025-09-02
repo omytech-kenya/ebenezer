@@ -47,8 +47,9 @@ const ContactPage: React.FC = () => {
                 <PhoneIcon className="h-8 w-8 text-primary-green flex-shrink-0 mr-4" />
                 <div>
                   <h3 className="text-lg font-semibold text-secondary-navy">Phone</h3>
-                  <p className="text-gray-700">+254 712 345 678</p>
-                  <a href="https://wa.me/254712345678" target="_blank" rel="noopener noreferrer" className="text-primary-green hover:underline">Chat on WhatsApp</a>
+                  <p className="text-gray-700">+254 727 676 441</p>
+                  <p className="text-gray-700">+254 724 445 676</p>
+                  <a href="https://wa.me/254727676441" target="_blank" rel="noopener noreferrer" className="text-primary-green hover:underline">Chat on WhatsApp</a>
                 </div>
               </div>
               <div className="flex items-start">
