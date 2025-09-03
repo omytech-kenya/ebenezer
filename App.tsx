@@ -1,22 +1,22 @@
-
-import React from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import AcademicsPage from './pages/AcademicsPage';
-import ContactPage from './pages/ContactPage';
-import GalleryPage from './pages/GalleryPage';
-import TeachersPortal from './pages/TeachersPortal';
-import ParentsPortal from './pages/ParentsPortal';
+import React from "react";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import AcademicsPage from "./pages/AcademicsPage";
+import ContactPage from "./pages/ContactPage";
+import GalleryPage from "./pages/GalleryPage";
+import TeachersPortal from "./pages/TeachersPortal";
+import ParentsPortal from "./pages/ParentsPortal";
+import HeadteacherDashboard from "./pages/HeadteacherDashboard";
 
 const App: React.FC = () => {
   const ScrollToTop: React.FC = () => {
     const location = useLocation();
     React.useEffect(() => {
       if (!location.hash) {
-        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
       }
     }, [location.pathname]);
     return null;
@@ -36,6 +36,10 @@ const App: React.FC = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/portal/teachers" element={<TeachersPortal />} />
             <Route path="/portal/parents" element={<ParentsPortal />} />
+            <Route
+              path="/portal/teachers/headteacher"
+              element={<HeadteacherDashboard />}
+            />
           </Routes>
         </main>
         <Footer />
