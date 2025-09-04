@@ -245,7 +245,59 @@ const ClassTeacherDashboard = () => {
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+          {/* Mobile: Notification at top right */}
+          <div className="flex justify-end sm:hidden mb-4">
+            <div className="flex items-center space-x-4">
+              <div className="relative">
+                <button className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 17h5l-5 5-5-5h5v-12h5v12z"
+                    />
+                  </svg>
+                </button>
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  3
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: Full width title card */}
+          <div className="sm:hidden">
+            <div className="bg-gradient-to-r from-primary-green to-secondary-navy rounded-lg p-4 text-white text-center mb-4">
+              <div className="flex items-center justify-center space-x-3 mb-2">
+                <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                  <span className="text-lg">👩‍🏫</span>
+                </div>
+                <div>
+                  <p className="font-semibold">{teacherInfo.name}</p>
+                  <p className="text-xs opacity-90">
+                    Class Teacher - {teacherInfo.class}
+                  </p>
+                </div>
+              </div>
+              <div className="text-center">
+                <p className="text-xs opacity-90">
+                  Employee ID: {teacherInfo.employeeId}
+                </p>
+                <p className="text-xs opacity-90">
+                  {teacherInfo.totalStudents} Students
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Original layout */}
+          <div className="hidden sm:flex sm:items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">👩‍🏫</span>
@@ -260,7 +312,6 @@ const ClassTeacherDashboard = () => {
                 </p>
               </div>
             </div>
-
             <div className="flex items-center space-x-4">
               <div className="relative">
                 <button className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full">
@@ -298,7 +349,7 @@ const ClassTeacherDashboard = () => {
       {/* Navigation Tabs */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <nav className="flex space-x-8">
+          <nav className="flex space-x-8 overflow-x-auto scrollbar-hide">
             {[
               { id: "overview", label: "Overview", icon: "📊" },
               { id: "students", label: "My Students", icon: "👥" },
@@ -311,7 +362,7 @@ const ClassTeacherDashboard = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`py-4 px-2 border-b-2 font-medium text-sm flex items-center space-x-2 ${
+                className={`py-4 px-2 border-b-2 font-medium text-sm flex items-center space-x-2 whitespace-nowrap ${
                   activeTab === tab.id
                     ? "border-primary-green text-primary-green"
                     : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"

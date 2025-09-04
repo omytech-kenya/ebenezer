@@ -235,21 +235,8 @@ const ParentDashboard = () => {
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-primary-green rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">👨‍👩‍👧‍👦</span>
-              </div>
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">
-                  Parent Portal
-                </h1>
-                <p className="text-gray-600 text-sm">
-                  Welcome, {parentInfo.name}
-                </p>
-              </div>
-            </div>
-
+          {/* Mobile: Notification at top right */}
+          <div className="flex justify-end sm:hidden mb-4">
             <div className="flex items-center space-x-4">
               <div className="relative">
                 <button className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full">
@@ -313,7 +300,7 @@ const ParentDashboard = () => {
       {/* Navigation Tabs */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <nav className="flex space-x-8">
+          <nav className="flex space-x-8 overflow-x-auto scrollbar-hide">
             {[
               { id: "overview", label: "Overview", icon: "📊" },
               { id: "academics", label: "Academic Progress", icon: "📚" },
@@ -325,7 +312,7 @@ const ParentDashboard = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`py-4 px-2 border-b-2 font-medium text-sm flex items-center space-x-2 ${
+                className={`py-4 px-2 border-b-2 font-medium text-sm flex items-center space-x-2 whitespace-nowrap ${
                   activeTab === tab.id
                     ? "border-primary-green text-primary-green"
                     : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"

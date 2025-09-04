@@ -97,44 +97,95 @@ const HeadteacherDashboard = () => {
     <div className="min-h-full bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Top Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
-        <div className="flex items-center justify-between px-6 py-4">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">
-              Headteacher Dashboard
-            </h1>
-            <p className="text-gray-600 text-sm mt-1">
-              Welcome back! Here's what's happening at Ebenezer School today.
-            </p>
+        <div className="px-6 py-4">
+          {/* Mobile: Notification at top right */}
+          <div className="flex justify-end sm:hidden mb-4">
+            <div className="flex items-center space-x-4">
+              <div className="relative">
+                <button className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 17h5l-5 5-5-5h5v-12h5v12z"
+                    />
+                  </svg>
+                </button>
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  3
+                </span>
+              </div>
+            </div>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <div className="relative">
-              <button className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full">
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 17h5l-5 5-5-5h5v-12h5v12z"
-                  />
-                </svg>
-              </button>
-              <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                3
-              </span>
-            </div>
-            <div className="flex items-center space-x-3 bg-gradient-to-r from-primary-green to-secondary-navy rounded-lg p-3 text-white">
-              <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                <span className="text-sm">👨‍💼</span>
+          {/* Mobile: Full width title card */}
+          <div className="sm:hidden">
+            <div className="bg-gradient-to-r from-primary-green to-secondary-navy rounded-lg p-4 text-white text-center mb-4">
+              <div className="flex items-center justify-center space-x-3 mb-2">
+                <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                  <span className="text-lg">👨‍💼</span>
+                </div>
+                <div>
+                  <p className="font-semibold">Dr. John Smith</p>
+                  <p className="text-xs opacity-90">Headteacher</p>
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-sm">Dr. John Smith</p>
-                <p className="text-xs opacity-90">Headteacher</p>
+            </div>
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-gray-900">
+                Headteacher Dashboard
+              </h1>
+              <p className="text-gray-600 text-sm mt-1">
+                Welcome back! Here's what's happening at Ebenezer School today.
+              </p>
+            </div>
+          </div>
+
+          {/* Desktop: Original layout */}
+          <div className="hidden sm:flex sm:items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900">
+                Headteacher Dashboard
+              </h1>
+              <p className="text-gray-600 text-sm mt-1">
+                Welcome back! Here's what's happening at Ebenezer School today.
+              </p>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="relative">
+                <button className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-full">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 17h5l-5 5-5-5h5v-12h5v12z"
+                    />
+                  </svg>
+                </button>
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  3
+                </span>
+              </div>
+              <div className="flex items-center space-x-3 bg-gradient-to-r from-primary-green to-secondary-navy rounded-lg p-3 text-white">
+                <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                  <span className="text-sm">👨‍💼</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-sm">Dr. John Smith</p>
+                  <p className="text-xs opacity-90">Headteacher</p>
+                </div>
               </div>
             </div>
           </div>
