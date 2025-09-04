@@ -461,7 +461,7 @@ const ParentDashboard = () => {
                       Pending Fees
                     </p>
                     <p className="text-3xl font-bold text-gray-900">
-                      ₦{feeInformation.pendingAmount.toLocaleString()}
+                      KES {feeInformation.pendingAmount.toLocaleString()}
                     </p>
                     <p className="text-xs text-orange-600 mt-1">
                       Due: {feeInformation.nextDueDate}
@@ -825,14 +825,14 @@ const ParentDashboard = () => {
                 <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                   <h4 className="font-medium text-blue-800">Total Fees</h4>
                   <p className="text-2xl font-bold text-blue-900">
-                    ₦{feeInformation.totalFees.toLocaleString()}
+                    KES {feeInformation.totalFees.toLocaleString()}
                   </p>
                   <p className="text-sm text-blue-600">Academic year</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <h4 className="font-medium text-green-800">Amount Paid</h4>
                   <p className="text-2xl font-bold text-green-900">
-                    ₦{feeInformation.paidAmount.toLocaleString()}
+                    KES {feeInformation.paidAmount.toLocaleString()}
                   </p>
                   <p className="text-sm text-green-600">
                     {(
@@ -845,7 +845,7 @@ const ParentDashboard = () => {
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200">
                   <h4 className="font-medium text-red-800">Pending Amount</h4>
                   <p className="text-2xl font-bold text-red-900">
-                    ₦{feeInformation.pendingAmount.toLocaleString()}
+                    KES {feeInformation.pendingAmount.toLocaleString()}
                   </p>
                   <p className="text-sm text-red-600">
                     Due: {feeInformation.nextDueDate}
@@ -869,7 +869,7 @@ const ParentDashboard = () => {
                             {fee.item}
                           </p>
                           <p className="text-xs text-gray-600">
-                            ₦{fee.amount.toLocaleString()}
+                            KES {fee.amount.toLocaleString()}
                           </p>
                         </div>
                         <span
@@ -901,7 +901,7 @@ const ParentDashboard = () => {
                         <div className="flex items-center justify-between">
                           <div>
                             <p className="text-sm font-medium text-gray-900">
-                              ₦{payment.amount.toLocaleString()}
+                              KES {payment.amount.toLocaleString()}
                             </p>
                             <p className="text-xs text-gray-600">
                               {payment.date} • {payment.method}

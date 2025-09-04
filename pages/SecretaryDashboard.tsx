@@ -370,7 +370,7 @@ const SecretaryDashboard = () => {
                       Fees Collected Today
                     </p>
                     <p className="text-3xl font-bold text-gray-900">
-                      ₦{todayStats.feesCollectedToday.toLocaleString()}
+                      KES {todayStats.feesCollectedToday.toLocaleString()}
                     </p>
                     <p className="text-xs text-primary-green mt-1">
                       ↗ {todayStats.paymentsToday} payments processed

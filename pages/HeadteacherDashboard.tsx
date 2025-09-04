@@ -510,7 +510,7 @@ const HeadteacherDashboard = () => {
                         Total Collected
                       </p>
                       <p className="text-3xl font-bold text-gray-900">
-                        ₦{feeStats.totalCollected.toLocaleString()}
+                        KES {feeStats.totalCollected.toLocaleString()}
                       </p>
                       <p className="text-xs text-green-600 mt-1">
                         ↗ +8.5% this month
@@ -541,7 +541,7 @@ const HeadteacherDashboard = () => {
                         Pending Fees
                       </p>
                       <p className="text-3xl font-bold text-gray-900">
-                        ₦{feeStats.totalPending.toLocaleString()}
+                        KES {feeStats.totalPending.toLocaleString()}
                       </p>
                       <p className="text-xs text-yellow-600 mt-1">
                         → 15 students pending
@@ -572,7 +572,7 @@ const HeadteacherDashboard = () => {
                         Overdue Fees
                       </p>
                       <p className="text-3xl font-bold text-gray-900">
-                        ₦{feeStats.totalOverdue.toLocaleString()}
+                        KES {feeStats.totalOverdue.toLocaleString()}
                       </p>
                       <p className="text-xs text-red-600 mt-1">
                         ↓ 8 students overdue
@@ -696,7 +696,7 @@ const HeadteacherDashboard = () => {
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="text-sm font-medium text-gray-900">
-                              ₦{record.amount.toLocaleString()}
+                              KES {record.amount.toLocaleString()}
                             </div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
