@@ -10,6 +10,7 @@ import GalleryPage from "./pages/GalleryPage";
 import TeachersPortal from "./pages/TeachersPortal";
 import ParentsPortal from "./pages/ParentsPortal";
 import HeadteacherDashboard from "./pages/HeadteacherDashboard";
+import SecretaryDashboard from "./pages/SecretaryDashboard";
 
 const App: React.FC = () => {
   const ScrollToTop: React.FC = () => {
@@ -39,6 +40,10 @@ const App: React.FC = () => {
             <Route
               path="/portal/teachers/headteacher"
               element={<HeadteacherDashboard />}
+            />
+            <Route
+              path="/portal/teachers/secretary"
+              element={<SecretaryDashboard />}
             />
           </Routes>
         </main>
